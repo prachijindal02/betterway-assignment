@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f1f3f6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Layout */
+.layout {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+}
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.product-img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+  background: #fff;
+}
+
+.product-info {
+  padding: 12px;
+}
+
+.product-info h3 {
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.category {
+  font-size: 12px;
+  color: gray;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #212121;
+  margin: 6px 0;
+}
+
+.stock {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+
+.stock.in {
+  color: green;
+}
+
+.stock.out {
+  color: red;
+}
+
+.product-info button {
+  width: 100%;
+  padding: 8px;
+  background: #ff9f00;
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.product-info button:hover {
+  background: #fb8c00;
+}
+
+.product-info button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+/* Cart */
+.cart {
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.sticky {
+  position: sticky;
+  top: 20px;
+}
+
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.qty button {
+  padding: 4px 8px;
+  margin: 0 4px;
+}
+
+.remove-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 5px 6px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Empty */
+.empty {
+  text-align: center;
+  color: gray;
+}
